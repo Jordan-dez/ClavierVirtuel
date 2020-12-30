@@ -1,0 +1,122 @@
+.keybord{
+    background-color: blue;
+    display: grid;
+    grid-template-rows: 150px repeat(2,1fr);
+}
+.keyboardMain{
+  grid-row: 2/2;
+  width: 100%;
+}
+.keyblockfirsth{
+  display: grid;
+  grid-template-columns: repeat(15,1fr);
+}
+.keyblocksecond{
+  display: grid;
+  grid-template-columns: repeat(14,1fr);
+}
+.keyblockthreeth{
+  display: grid;
+  grid-template-columns: repeat(13,1fr);
+}
+.keyblockforth{
+  display: grid;
+  grid-template-columns: repeat(15,1fr);
+}
+.keyblockfiveth{
+  display: grid;
+  grid-template-columns: repeat(11,1fr);
+}
+/** Dark Mode Toggle***/
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+    left: 25px;
+    top: 30px;
+  }
+  
+  .theme-switch-wrapper span {
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+  
+  .toggle-text {
+    position: relative;
+    top: -4px;
+    right: 5px;
+    color: var(--on-background);
+  }
+  
+  .theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+  
+  .theme-switch input {
+    display: none;
+  }
+  
+  .slider {
+    background: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+  }
+  
+  .slider::before {
+    background: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+  }
+  
+  input:checked + .slider {
+    background: var(--primary-color);
+  }
+  
+  input:checked + .slider::before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round::before {
+    border-radius: 50%;
+  }
+  
+  .fas {
+    font-size: 30px;
+    margin-right: 5px;
+  }
+  /* keyboard bottoms***/
+  kbd {
+    background-color: #eee;
+    border-radius: 3px;
+    border: 1px solid #b4b4b4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(255, 255, 255, .7) inset;
+    color: #333;
+    display: inline-block;
+    font-size: .85em;
+    font-weight: 700;
+    line-height: 1;
+    padding: 2px 4px;
+    white-space: nowrap;
+    cursor: pointer;
+   }
+   #space{
+     background-color: fuchsia;
+   }
