@@ -1,4 +1,4 @@
-.keybord{
+.keyboard{
     background-color: blue;
     display: grid;
     grid-template-rows: 150px repeat(2,1fr);
