@@ -12,15 +12,11 @@
 </head>
 <body>
     <div class="keyboard">
-        <header class="theme-switch-wrapper">
+        <header>
             <span id="toggle-icon">
                 <span class="toggle-text">Mode Jour</span>
                 <i class="fas fa-sun"></i>
             </span>
-           <!--  <label class="theme-switch">
-                <input type="checkbox">
-                <div class="slider round"></div> 
-            </label> -->
             <label class="switch">
                 <input type="checkbox" checked>
                 <span class="slider round"></span>
@@ -88,7 +84,7 @@
                 <kbd><sup>.</sup><sub>;</sub></kbd>
                 <kbd><sup>/</sup> <sub>:</sub></kbd>
                 <kbd><sup>§</sup> <sub>!</sub></kbd>
-                <kbd><i class="fas fa-angle-up"></i></kbd>
+                <kbd class="directionkey"><i class="fas fa-angle-up"></i></kbd>
                 <kbd>Maj</kbd>
                 <kbd>Supp.</kbd>
             </div><!-- end of div.keyboardRow -->
@@ -97,12 +93,12 @@
                 <kbd>Ctrl</kbd>
                 <kbd><i class="fab fa-windows"></i></kbd>
                 <kbd>Alt</kbd>
-                <kbd id="spacekey"></kbd>
+                <kbd id="spacekey"><span class="sr-only">espace</span> </kbd>
                 <kbd>Altgr</kbd>
                 <kbd>Ctrl</kbd>
-                <kbd><i class="fas fa-angle-left"></i></kbd>
-                <kbd><i class="fas fa-angle-down"></i></kbd>
-                <kbd><i class="fas fa-angle-right"></i></kbd>
+                <kbd class="directionkey"><i class="fas fa-angle-left"></i></kbd>
+                <kbd class="directionkey"><i class="fas fa-angle-down"></i></kbd>
+                <kbd class="directionkey"><i class="fas fa-angle-right"></i></kbd>
                 <kbd>options</kbd>
                 
             </div> <!-- end of div.keyboardRow -->
@@ -115,7 +111,8 @@
             <a href="google.com"><i class="fa fa-google"></i></a>
         </div>
         <p>&copy;2020 Jordan KAYA</p>
-    </footer> <!-- endof footer -->
+        <i class="far fa-envelope"></i>
+        </footer> <!-- endof footer -->
 
 </body>
 </html>

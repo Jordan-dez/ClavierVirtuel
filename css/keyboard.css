@@ -1,7 +1,11 @@
+body{
+  background-color: rgb(214, 214, 214);
+}
+
 .keyboard{
-    background-color: blue;
-    display: grid;
-    grid-template-rows: 150px repeat(2,1fr);
+  padding: 10px 50px;
+  display: grid;
+  grid-template-rows: 50px repeat(1,2fr);
 }
 .keyboardMain{
   grid-row: 2 / 2;
@@ -13,18 +17,20 @@
 }
 /**stylisation key**/
 #enterKey{
-grid-column: 14 / 16;
+  grid-column: 14 / 16;
+  grid-row: -1 / -2;
 }
 #spacekey{
-grid-column: 5/10;
-background-color: fuchsia;
+  grid-column: 5/10;
+  background-color: fuchsia;
+}
+.directionkey{
+  text-align: center;
 }
 /* keyboard bottoms***/
 kbd {
-  background-color: #eee;
-  border-radius: 3px;
-  border: 1px solid #b4b4b4;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(255, 255, 255, .7) inset;
+  border-radius: 5px;
+  border: none;
   color: #333;
   display: inline-block;
   font-size: .85em;
@@ -34,85 +40,23 @@ kbd {
   white-space: nowrap;
   cursor: pointer;
   font-size: 15px;
+  margin: 5px;
+  background-color: rgb(214, 214, 214);
+  box-shadow: 3px 3px 10px #474343,-3px -3px 10px #eeebeb;
+ }
+ /***incons**/
+ .fab{
+   font-size: 30px;
+   color: khaki;
  }
 
-/** Dark Mode Toggle***/
-.theme-switch-wrapper {
-    display: flex;
-    align-items: center;
-    z-index: 100;
-    position: fixed;
-    left: 25px;
-    top: 30px;
-  }
-  
-  .theme-switch-wrapper span {
-    margin-right: 10px;
-    font-size: 1rem;
-  }
-  
-  .toggle-text {
-    position: relative;
-    top: -4px;
-    right: 5px;
-    color: var(--on-background);
-  }
-  
-  .theme-switch {
-    display: inline-block;
-    height: 34px;
-    position: relative;
-    width: 60px;
-  }
-  
-  .theme-switch input {
-    display: none;
-  }
-  
-  .slider {
-    background: #ccc;
-    bottom: 0;
-    cursor: pointer;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: 0.4s;
-  }
-  
-  .slider::before {
-    background: #fff;
-    bottom: 4px;
-    content: "";
-    height: 26px;
-    left: 4px;
-    position: absolute;
-    transition: 0.4s;
-    width: 26px;
-  }
-  
-  input:checked + .slider {
-    background: var(--primary-color);
-  }
-  
-  input:checked + .slider::before {
-    transform: translateX(26px);
-  }
-  
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round::before {
-    border-radius: 50%;
-  }
-  
+/** Dark Mode Toggle***/  
   .fas {
     font-size: 30px;
     margin-right: 5px;
   }
-  /**test**/
   .switch {
+    top: -10px;
     position: relative;
     display: inline-block;
     width: 60px;
