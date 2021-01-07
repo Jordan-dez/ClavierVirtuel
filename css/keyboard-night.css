@@ -1,0 +1,15 @@
+.nightkbd{
+    color: white;
+   /*  box-shadow: rgba(58, 235, 205, 0.19) 0px 10px 20px, rgba(75, 243, 41, 0.23) 0px 6px 6px; */
+    box-shadow: rgba(58, 235, 205, 0.19) 0px 19px 38px, rgba(134, 186, 199, 0.22) 0px 15px 12px;
+    
+    
+}
+.nightbody{
+    background-color:rgb(2, 2, 15);
+}
+.nightkbd:hover{
+    background-color: rgb(15, 4, 175);
+    color: rgb(238, 240, 235);
+    
+}
