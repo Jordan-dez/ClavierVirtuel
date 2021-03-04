@@ -1,6 +1,7 @@
 const switchToggle = document.querySelector('input[type="checkbox"');
 const myKbds = document.querySelectorAll('kbd') ;
 const toggleIcon = document.getElementById('toggle-icon');
+const capsIcon = document.getElementById('capskey');
 var element = document.body;
 
 
@@ -51,3 +52,29 @@ switchToggle.addEventListener('change',modetheme);
 window.addEventListener("DOMContentLoaded", (event) => {
    lightMode();
   });
+  /****touche verrouillage */
+  const capskey = document.getElementById("verrou");
+  capskey.addEventListener('change',verroMode);
+  function verroMode(event){
+      if(event.target.checked){
+        capsIcon.children[0].classList.replace('fa-unlock', 'fa-lock');
+        capslockActivated();
+      }else{
+        capsIcon.children[0].classList.replace('fa-lock', 'fa-unlock');
+        capslockDisable();
+        console.log(myKbds);
+      }
+  }
+
+  function capslockActivated(){
+    for(let i=0;i<myKbds.length;i++){
+        document.getElementsByTagName("kbd")[i].style.textTransform = "uppercase";
+       
+       }
+  }
+  function capslockDisable(){
+    for(let i=0;i<myKbds.length;i++){
+        document.getElementsByTagName("kbd")[i].style.textTransform = "lowercase";
+       
+       }
+  }

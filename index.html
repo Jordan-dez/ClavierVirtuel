@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/keyboard.css" >
+    <link rel="stylesheet" href="css/keyboard.css" >
     <link rel="stylesheet" href="css/keyboard-light.css">
     <link rel="stylesheet" href="css/keyboard-night.css">
     <link rel="icon" type="image/png" href="https://s2.googleusercontent.com/s2/favicons?domain=www.jacinto.design">
@@ -15,6 +15,9 @@
     <title>Clavier Virtuel</title>
 </head>
 <body>
+    <div class="mytextaerea">
+        <textarea name="myscreen" id="myscreen" cols="30" rows="10"></textarea>
+    </div>
     <div class="keyboard">
         <header>
             <span id="toggle-icon">
@@ -46,7 +49,7 @@
             </div><!-- end of div.keyboardRow -->
             <div class="keyboardRow">
                 <kbd>Tab</kbd>
-                <kbd class="centerkey">a</kbd>
+                <kbd class="centerkey" value="a">a</kbd>
                 <kbd class="centerkey">z</kbd>
                 <kbd class="centerkey">e</kbd>
                 <kbd class="centerkey">r</kbd>
@@ -61,7 +64,16 @@
                 <kbd id="enterKey">Entrée</kbd>
             </div><!-- end of div.keyboardRow -->
             <div class="keyboardRow">
-                <kbd> <sup><input type="radio"></sup>verr. maj</kbd>
+                <kbd id="keylock">
+                    <input type="checkbox" id="verrou">
+                    <label for="verrou">
+                        <span id="capskey">
+                            <i class="fa fa-unlock" aria-hidden="true"></i>
+                        </span>
+                        
+                        <span class="sr-only">verr. maj</span>
+                    </label>
+                </kbd>
                 <kbd class="centerkey">q</kbd>
                 <kbd class="centerkey">s</kbd>
                 <kbd class="centerkey">d</kbd>
@@ -74,7 +86,7 @@
                 <kbd class="centerkey">m</kbd>
                 <kbd><sup>%</sup><sub>ù</sub></kbd>
                 <kbd><sup>µ</sup><sub>*</sub></kbd>
-                <kbd class="keysuiteentre"><span class="sr-only">entrée</span></kbd>
+                <kbd class="centerkey"></kbd>
             </div><!-- end of div.keyboardRow -->
             <div class="keyboardRow">
                 <kbd>Maj.</kbd>
@@ -111,12 +123,7 @@
         
     </div> <!-- end of div.keyboard -->
     <footer>
-        <div class="reseau">
-            <a href="www.fecebook.com"><i class="fa fa-facebook"></i></a>
-            <a href="google.com"><i class="fa fa-google"></i></a>
-        </div>
-        <p>&copy;2020 Jordan KAYA</p>
-        <i class="far fa-envelope"></i>
+        <p>&copy;2020 Jordan KAYA &amp; <a href="kayajordan21@gmail.com"><i class="far fa-envelope"></i></a></p>
     </footer> <!-- endof footer -->
    <!--  script -->
    <script src="js/changeMode.js"></script>

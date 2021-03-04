@@ -1,8 +1,10 @@
 .lightbody{
     background-color: rgb(214, 214, 214);
     font-family: 'Patua One',sans-serif;
+    transition: all 0.5s ease-out;
   }
 .lightkbd{
     background-color: rgb(214, 214, 214);
     box-shadow: 3px 3px 10px #474343,-3px -3px 10px #eeebeb;
+    margin-top: 5px;
   }
