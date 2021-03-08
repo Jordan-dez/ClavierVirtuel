@@ -3,6 +3,7 @@ const myKbds = document.querySelectorAll('kbd') ;
 const toggleIcon = document.getElementById('toggle-icon');
 const capsIcon = document.getElementById('capskey');
 var element = document.body;
+let myscreen = document.getElementById('myscreen');
 
 
 function modetheme(event){
@@ -78,3 +79,17 @@ window.addEventListener("DOMContentLoaded", (event) => {
        
        }
   }
+    /*********les touches du clavier************ */
+    var touches = document.querySelectorAll('.keyboardRow kbd');
+    //var touches = document.querySelectorAll('.centerkey');
+    touches.forEach(function(el) {
+  el.addEventListener('click', onClick, false);
+  })
+
+function onClick(e) {
+  var kbd = e.currentTarget;
+  myscreen.value = myscreen.value + kbd.innerText;
+  console.log(myscreen.value);
+  //  myscreen.textContent = myscreen.innerText + kbd.innerText;
+  //  console.log(kbd.innerText);
+}
