@@ -4,6 +4,7 @@ const toupcase = document.querySelectorAll('.maj');
 const toggleIcon = document.getElementById('toggle-icon');
 const capsIcon = document.getElementById('capskey');
 const toucheentree = document.getElementById('enterKey');
+const touchesupprime = document.getElementById('touchesup');
 var element = document.body;
 let myscreen = document.getElementById('myscreen');
 const toucheespace = document.getElementById('spacekey');
@@ -116,4 +117,8 @@ toucheentree.addEventListener('click',function(e){
 toucheespace.addEventListener('click',(e)=>{
   myscreen.value +=" ";
 });
-//&nbsp;
+/******************touche supprimée */
+ touchesupprime.addEventListener('click',function(e){
+   myscreen.value= myscreen.value.slice(0, myscreen.value.length-1);
+  
+ });
