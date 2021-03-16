@@ -6,8 +6,11 @@ const capsIcon = document.getElementById('capskey');
 const toucheentree = document.getElementById('enterKey');
 const touchesupprime = document.getElementById('touchesup');
 var element = document.body;
+let isActivated = false;
 let myscreen = document.getElementById('myscreen');
 const toucheespace = document.getElementById('spacekey');
+const toucheshift = document.getElementById('toucheshift');
+
 
 
 function modetheme(event){
@@ -68,10 +71,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
       if(event.target.checked){
         capsIcon.children[0].classList.replace('fa-unlock', 'fa-lock');
         capslockActivated();
+        isActivated=true;
         console.log('test');
       }else{
         capsIcon.children[0].classList.replace('fa-lock', 'fa-unlock');
         capslockDisable();
+        isActivated=false;
         console.log('test ok');
         //console.log(myKbds);
       }
@@ -121,4 +126,18 @@ toucheespace.addEventListener('click',(e)=>{
  touchesupprime.addEventListener('click',function(e){
    myscreen.value= myscreen.value.slice(0, myscreen.value.length-1);
   
+ });
+ /**********touche shift */
+ toucheshift.addEventListener('click',(e)=>{
+
+  console.log("bonjour jordan");
+  console.log(isActivated);
+  if(isActivated==false){
+     capslockActivated();
+     console.log(isActivated);
+  }
+  else{
+    capslockDisable();
+  }
+
  });
