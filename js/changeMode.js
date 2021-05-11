@@ -72,6 +72,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         capsIcon.children[0].classList.replace('fa-unlock', 'fa-lock');
         capslockActivated();
         isActivated=true;
+        toucheshift.style.backgroundColor="transparent";
         console.log('test');
       }else{
         capsIcon.children[0].classList.replace('fa-lock', 'fa-unlock');
@@ -135,9 +136,12 @@ toucheespace.addEventListener('click',(e)=>{
   if(isActivated==false){
      capslockActivated();
      console.log(isActivated);
+     toucheshift.style.backgroundColor="blue";
+     isActivated=true;
   }
   else{
     capslockDisable();
+    isActivated=false;
   }
 
  });
